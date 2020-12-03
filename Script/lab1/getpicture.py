@@ -3,7 +3,7 @@ from configuration import SAVEDPATH
 import numpy as np
 import cv2
 
-def get(gray=True):
+def get(gray=True)->np.ndarray:
     if gray:
         return cv2.imread(IMAGEPATH + r'\lxm.png',cv2.IMREAD_GRAYSCALE)
     else:

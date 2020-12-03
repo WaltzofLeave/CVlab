@@ -50,7 +50,7 @@ def canny(img,high=60,low=30):
     img = dtd(img,high,low)
     return img
 
-img = cv2.imread(IMAGEPATH + r'\lxm.png',cv2.IMREAD_GRAYSCALE)
+img = cv2.imread(IMAGEPATH + r'\cyh.jpg',cv2.IMREAD_GRAYSCALE)
 img = cv2.resize(img,(500,500))
 img = canny(img)
 show(img)
