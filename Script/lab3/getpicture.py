@@ -1,0 +1,10 @@
+from configuration import IMAGEPATH
+from configuration import SAVEDPATH
+import numpy as np
+import cv2
+
+def get(gray=True)->np.ndarray:
+    if gray:
+        return cv2.imread(IMAGEPATH + r'\car.jpg',cv2.IMREAD_GRAYSCALE)
+    else:
+        return cv2.imread(IMAGEPATH + r'\car.jpg')

@@ -121,6 +121,8 @@ def histogram_specification(img:np.ndarray, level: int, spec: list)->np.ndarray:
 
     print(img)
     return restored(img,table)
+
+
 img = get()
 img = histogram_specification(img,8,[0,0,0,0.15,0.20,0.30,0.20,0.15])
 cv2.imshow('ok',img)
