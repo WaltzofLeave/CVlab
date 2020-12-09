@@ -27,6 +27,7 @@ def salt_and_pepper_noise(picture:np.ndarray,SNR:float=0.75,verbose:bool=True)->
     if verbose:
         show(picture)
     cv2.imwrite(SAVEDPATH + r'\salt_and_pepper_noise.jpg',picture)
+    return picture
 def gauss_noise(picture:np.ndarray,SNR:float = 0.75,verbose:bool=True)->np.ndarray:
     orig_size = picture.shape
     arr = picture.flatten()
@@ -41,6 +42,6 @@ def gauss_noise(picture:np.ndarray,SNR:float = 0.75,verbose:bool=True)->np.ndarr
     if verbose:
         show(picture)
     cv2.imwrite(SAVEDPATH + r'\guass_noise.jpg',picture)
-
-sppicture = salt_and_pepper_noise(picture)
-gspicture = gauss_noise(picture)
+    return picture
+#sppicture = salt_and_pepper_noise(picture)
+#gspicture = gauss_noise(picture)
